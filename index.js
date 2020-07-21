@@ -6,7 +6,7 @@ const { exists, Stats, stat } = require('fs');
 const { error } = require('console');
 const { removeListener, report } = require('process');
 const client = new Discord.Client();
-const ytdl = require('ytdl-core');
+
 require('events').EventEmitter.defaultMaxListeners = 15;
 const invitelink = 'https://discord.com/api/oauth2/authorize?client_id=708910787393224734&permissions=0&scope=bot'
 var prefix = ":"
