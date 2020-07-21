@@ -19,8 +19,8 @@ var flip = ["Pile", "Face"]
 const request = require("request")
 const array1 = ["Lose an arm", "Get a cat"]
 const array2 = ["lose a leg", "Get a dog"]
-var cheerio = require("cheerio");
-const { url } = require('inspector');
+
+
 
 
 
@@ -260,33 +260,7 @@ client.on("message", message => {
     }    
 })
 
-//search for images
-client.on("message", message => {
-    if(message.content.startsWith(",search")) {
-        let element = message.content.substring(8)
-        var options = {
-            url: "http://results.dogpile.com/serp?qc=images&q=" + element,
-            method: "GET",
-            headers: {
-                "Accept": "text/html",
-                "User-Agent": "Chrome"
-            }
-        }
-        request(options, function(error, response, responseBody) {
-            $ = cheerio.load(responseBody)
-            var links = $(".image a.link");
-            var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
-            if(!urls.length) {
-                message.channel.send("No results found")
-            }
-            else {
-                let x = Math.random() * urls.length - 1
-                let resultf = Math.floor(x)
-                message.channel.send(urls[resultf])
-            }
-        })
-    }
-})
+
 
 client.on("message", message => {
     if(message.content.startsWith("https://discord.gg/")) {
