@@ -16,7 +16,7 @@ var servr = undefined
 var rps = ["rock" , "paper" , "scissors" , "rock" , "paper" , "scissors" , "rock" , "paper" , "scissors"]
 const permsArray = ["CREATE_INSTANT_INVITE", "MANAGE_CHANNELS", "MANAGE_WEBHOOKS", "READ_MESSAGE_HISTORY", "SEND MESSAGES", "SEND_TTS_MESSAGES", "MANAGE_MESSAGES", "EMBED_LINKS", "ATTACH_FILES", "MENTION_EVERYONE", "USE_EXTERNAL_EMOJIS", "ADD_REACTIONS" ]
 var flip = ["Pile", "Face"]
-const request = require("request")
+
 const array1 = ["Lose an arm", "Get a cat"]
 const array2 = ["lose a leg", "Get a dog"]
 
