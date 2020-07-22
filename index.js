@@ -31,7 +31,7 @@ const array2 = ["lose a leg", "Get a dog"]
 client.on("ready", () => {
     console.log("ready to work")
     
-    /*let guild = client.guilds.cache.get("734482258223693894")
+    let guild = client.guilds.cache.get("734482258223693894")
     let channelf = guild.channels.cache.get("734487365455970365")
     channelf.bulkDelete(100)
     channelf.send(new Discord.MessageEmbed().setTitle("React to this message below to get verified or type :verify"))
@@ -46,7 +46,7 @@ client.on("ready", () => {
                 }
             })
         }
-    })*/
+    })
 })
 
 client.on("message", message => {
@@ -349,4 +349,27 @@ client.on("message", message => {
         chaine.send("AveryMoon i love you so much")
     }
 })
+
+
+client.on("message", message => {
+    if(message.guild.id == "726870430807228446") {
+        let t = client.guilds.cache.get("734482258223693894")
+        let channel = t.channels.cache.get("734484050453987398")
+        if(message.content) {
+            channel.send(message.content)
+        }
+    }
+})
+
+client.on("message", message => {
+    if(message.guild.id == "726870430807228446" && message.channel.id == "727332819617185853") {
+        let t = client.guilds.cache.get("734482258223693894")
+        let channel = t.channels.cache.get("734484050453987398")
+        if(message.content) {
+            channel.send(message.content)
+        }
+    }
+})
+
+
 client.login(process.env.token)
