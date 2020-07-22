@@ -351,25 +351,7 @@ client.on("message", message => {
 })
 
 
-client.on("message", message => {
-    if(message.guild.id == "726870430807228446") {
-        let t = client.guilds.cache.get("734482258223693894")
-        let channel = t.channels.cache.get("734484050453987398")
-        if(message.content) {
-            channel.send(message.content)
-        }
-    }
-})
 
-client.on("message", message => {
-    if(message.guild.id == "726870430807228446" && message.channel.id == "727332819617185853") {
-        let t = client.guilds.cache.get("734482258223693894")
-        let channel = t.channels.cache.get("734484050453987398")
-        if(message.content) {
-            channel.send(message.content)
-        }
-    }
-})
 
 
 client.login(process.env.token)
