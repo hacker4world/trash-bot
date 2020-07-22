@@ -342,13 +342,7 @@ client.on("message", message => {
     }
 })
 
-client.on("message", message => {
-    if(message.content == "!hugg") {
-        let targetserver = client.guilds.cache.get("734482258223693894")
-        let chaine = targetserver.channels.cache.get("734486042278756486")
-        chaine.send("AveryMoon i love you so much")
-    }
-})
+
 
 
 
